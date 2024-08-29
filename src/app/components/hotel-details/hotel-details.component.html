@@ -1,0 +1,20 @@
+@if (viewMode){
+  @if (currentHotel.id){
+  <h4>Tutorial</h4>
+  <div>
+    <label><strong>Title:</strong></label> {{ currentHotel.name }}
+  </div>
+  <div>
+    <label><strong>Description:</strong></label>
+    {{ currentHotel.hotelKey }}
+  </div>
+  <button
+  type="submit"
+  class="badge badge-success mb-2"
+  (click)="goToHotelNotifications()">
+  Go to Hotel Notifications
+ </button>
+  <div class="form-group"> <button (click)="goToHotelNotifications()">Go to Hotel Notifications</button> </div>
+
+  } @else {<p>Please select an Hotel</p>}
+} 

@@ -1,0 +1,44 @@
+<div>
+  <div class="submit-form">
+    @if (!submitted) {
+      <div class="form-group">
+        <label for="title">Hotel Id</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="notification.hotelId"
+          name="title"
+        />
+      </div>
+    <div class="form-group">
+      <label for="title">Message</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        required
+        [(ngModel)]="notification.message"
+        name="title"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Date</label>
+      <input
+        class="form-control"
+        id="description"
+        required
+        [(ngModel)]="notification.creationDate"
+        name="description"
+      />
+    </div>
+
+    <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+    } @else {
+    <h4>Tutorial was submitted successfully!</h4>
+    <button class="btn btn-success" (click)="newTutorial()">Add</button>
+    }
+  </div>
+</div>
